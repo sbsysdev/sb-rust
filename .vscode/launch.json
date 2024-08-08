@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug guessing_game",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=guessing_game",
+          "--package=guessing_game",
+          "--manifest-path=${workspaceFolder}/guessing_game/Cargo.toml"
+        ],
+        "filter": {
+          "name": "guessing_game",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "SB-Rust",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "rust-lang.rust-analyzer",
+        "fill-labs.dependi",
+        "swellaby.vscode-rust-test-adapter",
+        "tamasfe.even-better-toml",
+        "vadimcn.vscode-lldb",
+        "dustypomerleau.rust-syntax"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly,type=bind"
+  ],
+  "postCreateCommand": "git config --global --add safe.directory /workspaces/sb-rust && git config --global core.autocrlf input"
+}
