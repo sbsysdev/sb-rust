@@ -23,5 +23,5 @@
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly,type=bind"
   ],
-  "postCreateCommand": "git config --global --add safe.directory /workspaces/sb-rust && git config --global core.autocrlf input"
+  "postCreateCommand": "git config --global --add safe.directory /workspaces/sb-rust && git config --global core.autocrlf input && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 }
